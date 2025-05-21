@@ -20,6 +20,7 @@ public class VoitureTest {
         tonobil.setMarque("zz");
         assertEquals(tonobil.getMarque(), "zz");
         assertEquals(tonobil.getPrix(), 600 );
+        assertEquals(tonobil.toString(), "Car{marque='zz', prix=600, id=2}");
 
     }
 
