@@ -65,5 +65,18 @@ class WebTests {
 
 }
 
+        @Test
+        public void getTestDEPht() throws Exception {
+            when(statistique1.prixMoyen()).thenThrow(new ArithmeticException());
+
+            mockMvc.perform(get("/statistique"))
+                    .andDo(print())
+                    .andExpect(status().is4xxClientError())
+                    .andReturn();
+
+            //
+
+}
+
    
 }
