@@ -41,7 +41,7 @@ class WebTests {
         when(statistique1.prixMoyen()).thenReturn(mockEchantillon);
 
 
-        // Perform the GET request and verify the response
+
         mockMvc.perform(get("/statistique"))
                 .andDo(print())
                 .andExpect(status().isOk())
@@ -61,7 +61,7 @@ class WebTests {
                 .content(voitureJson))
                 .andExpect(status().isOk());
     
-        //
+        
 
 }
 

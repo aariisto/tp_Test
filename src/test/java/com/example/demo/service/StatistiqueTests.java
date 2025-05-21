@@ -13,28 +13,26 @@ public class StatistiqueTests {
 
     @Test
 public void testCalculePrixMoyen() {
-    // Create mock objects for Voiture
+
     Voiture voiture1 = mock(Voiture.class);
     Voiture voiture2 = mock(Voiture.class);
 
-    // Mock the behavior of 'getPrix()' for the voiture objects
+
     when(voiture1.getPrix()).thenReturn(50);
     when(voiture2.getPrix()).thenReturn(1000);
 
-    // Create an instance of StatistiqueImpl
     StatistiqueImpl statistiqueImpl = new StatistiqueImpl();
 
-    // Add voitures to the StatistiqueImpl
     statistiqueImpl.ajouter(voiture1);
     statistiqueImpl.ajouter(voiture2);
 
-    // Call the 'prixMoyen()' method
+
     Echantillon echantillon = statistiqueImpl.prixMoyen();
 
-    // Validate the result
-    assertNotNull(echantillon);  // Check that the result is not null
-    assertEquals(2, echantillon.getNombreDeVoitures());  // Verify the number of voitures
-    assertEquals(525, echantillon.getPrixMoyen());  // Verify the average price
+
+    assertNotNull(echantillon); 
+    assertEquals(2, echantillon.getNombreDeVoitures());  
+    assertEquals(525, echantillon.getPrixMoyen()); 
 }
     
 
